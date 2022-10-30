@@ -1,0 +1,316 @@
+/* reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'Muller';
+  src: url('MullerBlack.eot');
+  src: local('Muller Black'), local('MullerBlack'),
+      url('fonts/MullerBlack.eot?#iefix') format('embedded-opentype'),
+      url('fonts/MullerBlack.woff2') format('woff2'),
+      url('fonts/MullerBlack.woff') format('woff'),
+      url('fonts/MullerBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('MullerExtraBold.eot');
+  src: local('Muller ExtraBold'), local('MullerExtraBold'),
+      url('fonts/MullerExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/MullerExtraBold.woff2') format('woff2'),
+      url('fonts/MullerExtraBold.woff') format('woff'),
+      url('fonts/MullerExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('MullerMedium.eot');
+  src: local('Muller Medium'), local('MullerMedium'),
+      url('fonts/MullerMedium.eot?#iefix') format('embedded-opentype'),
+      url('fonts/MullerMedium.woff2') format('woff2'),
+      url('fonts/MullerMedium.woff') format('woff'),
+      url('fonts/MullerMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* main styles */
+
+body {
+  background: linear-gradient(109.37deg, #FFFFFF 1.48%, #DEF3FF 133.49%);
+}
+
+.container {
+  max-width: 1486px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 120px 0 120px; 
+}
+
+.menu {
+  max-height: 80px;
+  height: 100%;
+  margin: auto 0;
+  padding: 20px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #202630;
+}
+
+.title-text {
+  line-height: 40px;
+  font-family: Muller, sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.text-content {
+  max-height: 245px;
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-text {
+  padding-bottom: 30px;
+
+  
+  background: linear-gradient(261.23deg, #215CF4 1.56%, #2129F4 99.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  
+  font-family: Muller, sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.content-text {
+  font-family: Muller, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-content {
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-upload-block {
+	width: 250px;
+	height: 78px;
+	overflow: hidden;
+	position: relative;
+}
+
+.file-upload-block input[type=file] {
+	/* делаем кроссбраузерную прозрачность */
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+	/* Позиционируем абсолютно отсносительно контейнера по правому краю */
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	/*
+	Задаем высоту и делаем шрифт огромным
+	для того чтобы кнопка "обзор" занимала все пространство контейнера
+	*/
+	height: 78px;
+	font-size: 600px;
+
+	/* Ставим наш инпут поверх всего содержимого */
+	z-index: 2;
+	cursor: pointer;
+	width: auto;
+}
+
+.file-upload-block .upload-helper {
+	width: 250px;
+  height: 78px;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 38px;
+  outline: none;
+  border: 0px;
+
+  color: #FFFFFF;
+  background: linear-gradient(261.23deg, #215CF4 1.56%, #2129F4 99.22%);
+
+  font-family: Muller, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+
+  transition: all 0.8s;
+}
+
+.upload-helper:hover {
+  cursor: pointer;
+  background: #282D38;
+}
+
+.btn-main {
+  width: 250px;
+  height: 78px;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 38px;
+  outline: none;
+  border: 0px;
+
+  color: #FFFFFF;
+  background-color: #282D38;
+
+  font-family: Muller, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  
+  transition: all 0.8s;
+}
+
+.btn-main:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+.btn-main:active {
+  transition: 0.1s;
+  color: #282D38;
+  background-color: #FFFFFF;
+}
+
+.bg-image {
+  height: 350px;
+  width: 100vw;
+
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    
+  z-index: -1;
+
+  background: url(/static/bg_bottom.png) no-repeat;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    -moz-background-size: 100%;
+    -ms-background-size: 100%;
+    -khtml-background-size: 100%;
+    background-size: 100%;
+}
+
+.failed-content {
+  max-height: 215px;
+  min-height: 175px;
+  height: 100%;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-padding {
+  padding-bottom: 30px;
+}
+
+.gif-wrapper {
+  padding-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gif-img {
+  width: 420px;
+  height: 342px;
+}
+
+.btn-resize {
+  width: 170px;
+  height: 54px;
+
+  font-size: 16px;
+}
+
+.blue-padding {
+  background-color: #2129F4;
+  margin-right: 40px;
+}
+
+.data-container {
+  max-width: 100vw;
+  width: 100%;
+  z-index: 1;
+  padding: 45px 10px 0 10px;
+  overflow-x: scroll;
+  background: linear-gradient(109.37deg, #FFFFFF 1.48%, #DEF3FF 133.49%);
+
+}

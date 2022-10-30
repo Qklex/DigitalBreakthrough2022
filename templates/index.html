@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <link rel= "stylesheet" type= "text/css" href= "static/style.css">
+    <title>Pip install pip</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav class="menu">
+          <a class="title-text" href="#">PiP</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="text-content">
+        <h1 class="main-text">Сервис по обнаружению мошеннических операций</h1>
+        <p class="content-text">Загрузите датасет в формате .csv, .xls или .xlsx и запустите проверку</p>
+      </div>
+
+      <div class="btn-container">
+        <form class="buttons-content" action = "/success" method = "post" enctype="multipart/form-data">
+          <div class="file-upload-block">
+            <input class="btn-upload"  type="file" id="file" name="file" multiple accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+            <button class="upload-helper" for="file">Загрузить</button>
+          </div>
+
+          <input class="btn-main" type = "submit" value="Обработать">
+        </form>
+      </div>
+      
+      <div class="bg-image"></div>
+    </main>
+    
+  </body>
+</html>
